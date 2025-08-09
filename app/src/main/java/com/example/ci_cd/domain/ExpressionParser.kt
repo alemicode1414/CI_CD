@@ -11,7 +11,7 @@ class ExpressionParser constructor(
             when {
                 curChar in operationSymbols -> {
                     result.add(
-                        ExpressionPart.Opt(operationFromSymbol(curChar))
+                        ExpressionPart.Op(operationFromSymbol(curChar))
                     )
                 }
 
