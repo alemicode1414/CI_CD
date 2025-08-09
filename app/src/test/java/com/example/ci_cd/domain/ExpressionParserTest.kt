@@ -1,6 +1,5 @@
 package com.example.ci_cd.domain
 
-import androidx.compose.ui.graphics.colorspace.Illuminant
 import org.junit.Assert.*
 
 import org.junit.Test
@@ -21,13 +20,13 @@ class ExpressionParserTest {
         // Assertion
         val expexted = listOf(
             ExpressionPart.Number(3.0),
-            ExpressionPart.Opt(Operation.ADD),
+            ExpressionPart.Op(Operation.ADD),
             ExpressionPart.Number(5.0),
-            ExpressionPart.Opt(Operation.SUBTRACT),
+            ExpressionPart.Op(Operation.SUBTRACT),
             ExpressionPart.Number(3.0),
-            ExpressionPart.Opt(Operation.MULTIPLY),
+            ExpressionPart.Op(Operation.MULTIPLY),
             ExpressionPart.Number(4.0),
-            ExpressionPart.Opt(Operation.DIVIDE),
+            ExpressionPart.Op(Operation.DIVIDE),
             ExpressionPart.Number(3.0),
         )
         assertEquals(expexted, parts)
@@ -40,12 +39,12 @@ class ExpressionParserTest {
 
         val expected = listOf(
             ExpressionPart.Number(4.0),
-            ExpressionPart.Opt(Operation.SUBTRACT),
-            ExpressionPart.Parentheses(ParenthesisType.Opening),
+            ExpressionPart.Op(Operation.SUBTRACT),
+            ExpressionPart.Parentheses(ParenthesesType.Opening),
             ExpressionPart.Number(4.0),
-            ExpressionPart.Opt(Operation.MULTIPLY),
+            ExpressionPart.Op(Operation.MULTIPLY),
             ExpressionPart.Number(5.0),
-            ExpressionPart.Parentheses(ParenthesisType.Closing),
+            ExpressionPart.Parentheses(ParenthesesType.Closing),
         )
         assertEquals(expected, actually)
     }
