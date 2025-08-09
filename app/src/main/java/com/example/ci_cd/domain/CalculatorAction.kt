@@ -1,4 +1,4 @@
-package com.example.ci_cd.domain
+package com.plcoding.materialcalculator.domain
 
 sealed interface CalculatorAction {
     data class Number(val number: Int): CalculatorAction

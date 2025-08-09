@@ -1,5 +1,8 @@
 package com.example.ci_cd.domain
 
+import com.plcoding.materialcalculator.domain.CalculatorAction
+import com.plcoding.materialcalculator.domain.ExpressionWriter
+import com.plcoding.materialcalculator.domain.Operation
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

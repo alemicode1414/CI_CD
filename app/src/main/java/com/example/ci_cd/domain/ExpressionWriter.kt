@@ -1,4 +1,4 @@
-package com.example.ci_cd.domain
+package com.plcoding.materialcalculator.domain
 
 
 class ExpressionWriter {
@@ -38,7 +38,7 @@ class ExpressionWriter {
     }
 
     private fun prepareForCalculation(): String {
-        val newExpression = expression.takeLastWhile {
+        val newExpression = expression.dropLastWhile {
             it in "$operationSymbols(."
         }
         if(newExpression.isEmpty()) {

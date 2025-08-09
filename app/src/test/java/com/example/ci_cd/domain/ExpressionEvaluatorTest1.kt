@@ -1,5 +1,9 @@
 package com.example.ci_cd.domain
 
+import com.plcoding.materialcalculator.domain.ExpressionEvaluator
+import com.plcoding.materialcalculator.domain.ExpressionPart
+import com.plcoding.materialcalculator.domain.Operation
+import com.plcoding.materialcalculator.domain.ParenthesesType
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

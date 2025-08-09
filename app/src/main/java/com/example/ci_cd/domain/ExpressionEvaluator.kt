@@ -1,4 +1,5 @@
-package com.example.ci_cd.domain
+package com.plcoding.materialcalculator.domain
+
 
 /**
  * Uses the following grammar
@@ -41,13 +42,11 @@ class ExpressionEvaluator(
         var sum = result.value
         while(true) {
             when(remaining.firstOrNull()) {
-
                 ExpressionPart.Op(Operation.MULTIPLY) -> {
                     val factor = evalFactor(remaining.drop(1))
                     sum *= factor.value
                     remaining = factor.remainingExpression
                 }
-
                 ExpressionPart.Op(Operation.DIVIDE) -> {
                     val factor = evalFactor(remaining.drop(1))
                     sum /= factor.value
@@ -82,7 +81,6 @@ class ExpressionEvaluator(
                 }
             }
             ExpressionPart.Op(Operation.PERCENT) -> evalTerm(expression.drop(1))
-
             is ExpressionPart.Number -> ExpressionResult(
                 remainingExpression = expression.drop(1),
                 value = part.number
