@@ -40,11 +40,11 @@ class ExpressionParserTest {
         val expected = listOf(
             ExpressionPart.Number(4.0),
             ExpressionPart.Op(Operation.SUBTRACT),
-            ExpressionPart.Parentheses(ParenthesisType.Opening),
+            ExpressionPart.Parentheses(ParenthesesType.Opening),
             ExpressionPart.Number(4.0),
             ExpressionPart.Op(Operation.MULTIPLY),
             ExpressionPart.Number(5.0),
-            ExpressionPart.Parentheses(ParenthesisType.Closing),
+            ExpressionPart.Parentheses(ParenthesesType.Closing),
         )
         assertEquals(expected, actually)
     }

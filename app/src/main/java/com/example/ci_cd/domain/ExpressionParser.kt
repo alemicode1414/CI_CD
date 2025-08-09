@@ -22,7 +22,7 @@ class ExpressionParser constructor(
 
                 curChar in "()" -> {
                     result.add(
-                        ExpressionPart.Parentheses(if (curChar == '(') ParenthesisType.Opening else ParenthesisType.Closing)
+                        ExpressionPart.Parentheses(if (curChar == '(') ParenthesesType.Opening else ParenthesesType.Closing)
                     )
                 }
                 else -> throw IllegalArgumentException("IllegalArgumentException")
